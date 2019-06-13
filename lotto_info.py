@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 
-# 가장 최근 회차번호 가져오기
+# 가장 최근 회차번호 가져오기 (크롤링)
 def get_recent_draw_no():
     url = "https://dhlottery.co.kr/common.do?method=main"
     html = urlopen(url)
@@ -13,7 +13,7 @@ def get_recent_draw_no():
     draw_no = soup.find(id="lottoDrwNo")
     return draw_no.get_text()
 
-#
+# 최다 당첨 지점 정보 가져오기 (크롤링)
 def parse_best_rank_places():
     url = "https://dhlottery.co.kr/store.do?method=topStoreRank&rank=1&pageGubun=L645"
     html = urlopen(url)
