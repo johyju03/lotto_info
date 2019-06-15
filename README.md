@@ -16,3 +16,5 @@ parse_best_rank_places() : 가장 많이 당첨된 지점정보 조회
 def code_blocks():
     print("Hello World")
 ```
+    def code_blocks():
+        print("Hello World")
